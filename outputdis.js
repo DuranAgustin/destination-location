@@ -10,7 +10,8 @@ document.getElementById("submit_btn").addEventListener("click", (evtObj) => {
   //   console.log(location);
   //   console.log(photo);
   //   console.log(description);
-  createCard(destination, location, photo, description);
+  let newCard = createCard(destination, location, photo, description);
+  document.getElementById("card_container").appendChild(newCard);
 
   document.getElementById("input").reset();
 });
@@ -18,25 +19,33 @@ document.getElementById("submit_btn").addEventListener("click", (evtObj) => {
 function createCard(destination, location, photo, description) {
   let card = document.createElement("div");
   card.setAttribute("class", "card");
-  card.style.width = "15rem";
+  card.style.width = "200px";
   card.style.height = "fit-content";
-  card.style.margin = "20px;";
 
-  //   console.log(photo);
+  console.log(photo);
 
   var img = document.createElement("img");
   img.setAttribute("class", "img");
-  let defaultPhoto =
+  let photoURL =
     "https://images.unsplash.com/photo-1473442240418-452f03b7ae40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzdGluYXRpb258ZW58MHx8MHx8&w=1000&q=80";
-  if (photo.length !== 0) {
-    img.src = photo;
+  if (photo.length === 0) {
+    img.src = photoURL;
+    console.log("set");
   } else {
-    img.src = defaultPhoto;
+    img.src = photo;
+    console.log("set12");
   }
   card.appendChild(img);
 
-  let cardBody = document.createElement("div");
-  cardBody.setAttribute("class", "card_body");
+  let locationName = document.createElement("p");
+  locationName.setAttribute("class", "locationName");
+  locationName.innerText = location;
+  card.appendChild(locationName);
 
-  let cardTitle = destination;
+  let cardDis = document.createElement("p");
+  cardDis.setAttribute("class", "cardDis");
+  cardDis.innerText = description;
+  card.appendChild(cardDis);
+
+  return card;
 }

@@ -17,3 +17,7 @@ p {
   flex-direction: column;
   justify-content: center;
 }
+.card_container {
+  justify-items: flex-end;
+  flex-direction: column;
+}
