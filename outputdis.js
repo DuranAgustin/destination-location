@@ -62,9 +62,9 @@ function createCard(destination, location, photo, description) {
 
 function editCard(event) {
   let card = event.target.parentElement;
-  card.children[0].innerText = window.prompt("enter new name");
-  card.children[1].innerText = window.prompt("enter new location");
-  card.children[2].innerText = window.prompt("enter new discription");
+  card.children[0].innerText = window.prompt("enter new name").trim();
+  card.children[1].innerText = window.prompt("enter new location").trim();
+  card.children[2].innerText = window.prompt("enter new discription").trim();
 }
 
 function deleteCard(event) {
