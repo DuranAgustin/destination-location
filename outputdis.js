@@ -21,7 +21,7 @@ function createCard(destination, location, photo, description) {
 
   console.log(photo);
 
-  var img = document.createElement("img");
+  const img = document.createElement("img");
   img.setAttribute("class", "img");
   img.setAttribute("alt", destination);
   let photoURL =
