@@ -21,36 +21,38 @@
     <h1 class="mainDisplay">Vacation Destinations Wishlist</h1>
     <p>Found exciting places to visit on your next vacation?</p>
     <p>Use the form below to add them to your Wishlist</p>
-    <section class="form_container">
-      <form class="forms" id="input">
-        <label for="destination">Destination Name</label>
-        <input
-          type="text"
-          required
-          input
-          id="destination"
-          placeholder="Enter Destination"
-        />
-        <label for="location">location</label>
-        <input
-          type="text"
-          required
-          input
-          id="location"
-          placeholder="Enter location"
-        />
-        <label for="photo">Photo</label>
-        <input type="url" id="photo" placeholder="Enter image URL" />
-        <label for="description">Description</label>
-        <input type="text" id="description" placeholder="Enter description" />
-        <button type="submit" id="submit_btn" value="create a form">
-          Add to List
-        </button>
-      </form>
+    <section class="all">
+      <section class="form_container">
+        <form class="forms" id="input">
+          <label for="destination">Destination Name</label>
+          <input
+            type="text"
+            required
+            input
+            id="destination"
+            placeholder="Enter Destination"
+          />
+          <label for="location">location</label>
+          <input
+            type="text"
+            required
+            input
+            id="location"
+            placeholder="Enter location"
+          />
+          <label for="photo">Photo</label>
+          <input type="url" id="photo" placeholder="Enter image URL" />
+          <label for="description">Description</label>
+          <input type="text" id="description" placeholder="Enter description" />
+          <button type="submit" id="submit_btn" value="create a form">
+            Add to List
+          </button>
+        </form>
+      </section>
+      <section>
+        <div id="card_container"></div>
+      </section>
+      <script src="outputdis.js"></script>
     </section>
-    <section>
-      <div id="card_container"></div>
-    </section>
-    <script src="outputdis.js"></script>
   </body>
 </html>
