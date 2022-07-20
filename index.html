@@ -4,55 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vacation Destination Wishlist</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+    <title>Destinations Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
-  <body>
-    <h1 class="mainDisplay">Vacation Destinations Wishlist</h1>
-    <p>Found exciting places to visit on your next vacation?</p>
-    <p>Use the form below to add them to your Wishlist</p>
-    <section class="all">
-      <section class="form_container">
-        <form class="forms" id="input">
-          <label for="destination">Destination Name</label>
-          <input
-            type="text"
-            required
-            input
-            id="destination"
-            placeholder="Enter Destination"
-          />
-          <label for="location">location</label>
-          <input
-            type="text"
-            required
-            input
-            id="location"
-            placeholder="Enter location"
-          />
-          <label for="photo">Photo</label>
-          <input type="url" id="photo" placeholder="Enter image URL" />
-          <label for="description">Description</label>
-          <input type="text" id="description" placeholder="Enter description" />
-          <button type="submit" id="submit_btn" value="create a form">
-            Add to List
-          </button>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="container">
+
+    <div class="row">
+      <div class="col-12">
+        <h1>Vacation Destinations WishList</h1>
+        <h4>Found exciting places to visition on your next vacation? Use the form below to add them to your wishlist</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <form id="dest_form">
+          <input  type="text" name="" id="loc_name" placeholder="Enter location" required>
+          <input type="text" name="" id="dest_name" placeholder="Enter destination" required>
+
+          <!-- <input type="url" name="" id="photo_url" placeholder="Enter photo url"> -->
+          <textarea name="" id="description" cols="30" rows="10" placeholder="Enter description"></textarea>
+         
+
+          <input type="submit" value="Add to wishlist">
         </form>
-      </section>
-      <section>
-        <div id="card_container"></div>
-      </section>
-      <script src="outputdis.js"></script>
-    </section>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <p id="dynamic_title">Enter destination details</p>
+        </div>
+        <div class="row" id="cards_container">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script type="module" src="./script.js"></script>
   </body>
 </html>

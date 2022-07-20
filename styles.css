@@ -6,19 +6,19 @@ h1.mainDisplay {
 p {
   text-align: center;
 }
-.all {
+#container {
   display: flex;
   align-items: flex-start;
 }
 
-.forms {
+.dest_form {
   display: flex;
   flex-direction: column;
   position: relative;
   max-width: 35%;
   min-width: 15rem;
 }
-#card_container {
+#row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
